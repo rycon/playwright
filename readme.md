@@ -7,7 +7,7 @@ The intention is to learn Playwright. To get a new project setup from scratch, t
   - [Folder Structure](#folder-structure)
   - [Test Strategy](#test-strategy)
 - [Steps I took to Install and Complete the Initial Setup](#steps-i-took-to-install-and-complete-the-initial-setup)
-- [Tools Needed](#tools-needed)
+- [Setup and Tools](#setup-and-tools)
   - [Verify Setup](#verify-setup)
     - [VSCode Extensions](#vscode-extensions)
     - [VSCode Settings](#vscode-settings)
@@ -40,7 +40,7 @@ Looking to setup tests in a way where the test code is made simple, and test sce
 2. I'll be following the pypi instructions
 3. 
 
-# Tools Needed
+# Setup and Tools
 Playwright only needs a few tools installed to get started.
 
 1. [Download and install git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git). You can also download their desktop app to manage your repo. I prefer to learn Git in the terminal.
@@ -50,7 +50,7 @@ Playwright only needs a few tools installed to get started.
 5. Next, in your terminal type `.\venv\Scripts\activate`. You will see the terminal change to have (venv) at the beginning of your line.
 6. Now we will install PlayWright using: `pip install pytest-playwright`
 7. Then we'll install the PlayWright browsers using: `playwright install`
-8. For API testing, I prefer [Insomnia(https://insomnia.rest/)] as it has a clean interface, it runs well, and has great graphQL support.
+8. For API testing, I prefer [Insomnia](https://insomnia.rest/) as it has a clean interface, it runs well, it has extensions, and has great graphQL support.
 
 ## Verify Setup
 To verify Python and pip are installed correctly type the following into your terminal:
@@ -67,7 +67,7 @@ playwright --version
 ```
 
 ### VSCode Extensions
-
+* 
 
 ### VSCode Settings
 
