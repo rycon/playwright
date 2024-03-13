@@ -9,8 +9,16 @@ The intention is to learn Playwright. To get a new project setup from scratch, t
 - [Steps I took to Install and Complete the Initial Setup](#steps-i-took-to-install-and-complete-the-initial-setup)
 - [Setup and Tools](#setup-and-tools)
   - [Verify Setup](#verify-setup)
+    - [Using reqirements.txt to install modules](#using-reqirementstxt-to-install-modules)
     - [VSCode Extensions](#vscode-extensions)
     - [VSCode Settings](#vscode-settings)
+- [Writing Tests](#writing-tests)
+  - [Configuration](#configuration)
+  - [UI Automation](#ui-automation)
+  - [API Automation](#api-automation)
+  - [Linters and Formatters](#linters-and-formatters)
+- [Util Files... What do they?!](#util-files-what-do-they)
+  - [](#)
 - [Resources Used](#resources-used)
 
 # About This Repository
@@ -66,10 +74,55 @@ pip --version
 playwright --version
 ```
 
+### Using reqirements.txt to install modules
+An alternative way to install PlayWright and other python modules used in this repo, is my using a requirements.txt file and the command `pip install -r requirements.txt`.
+
+You will first need to create the `requirements.txt` file in the root of your repo directory and fill it with:
+
+```text
+pytest-playwright
+pytest
+playwright
+pydantic
+assertpy
+Faker
+pytest-dependency
+flake8
+allure-pytest
+```
+
 ### VSCode Extensions
-* 
+* PlayWright Test for VSCode
+* PlayWright Runner
+* PlayWright Snippers
 
 ### VSCode Settings
+To come.. maybe.
+
+# Writing Tests
+Our instance of PlayWright we installed above also includes Pytest, which will make writing tests much easier. When creating a new test file it's important to remember to prefix your file name with test_, this will inform PyTest that the file is to be included when searching for tests to run.
+
+## Configuration
+I was able to find an example where the author wrote a config parser, which allows me to keep add details such as the test url, endpoints, and more in one file for reference in tests. Having details such as this in one place makes adding new tests, and fixing broken test much easier.
+
+## UI Automation
+I will be using the website https://www.automationexercise.com/ for my UI Automation.
+
+## API Automation
+I will be using https://reqres.in for my API automation. A lot of the files and structure I got from an excellent source on [Medium](https://elixirautomation.medium.com/). A lot of what I wanted to add from a PyTest Framework I used at a past contract was already in here. I didn't need to hack together a solution from memory.
+
+A lot of the PlayWright functions have been expanded upon by the utilities, this will allow me to write smaller and easier to read test scripts.
+
+The tutorial I followed has the endpoints in their own folder, I'm not sure how this would scale as the number of endpoints increases. Not something for me to worry about at this time.
+
+## Linters and Formatters
+
+
+# Util Files... What do they?!
+It's all well and good that I can read a tutorial and copy and paste their examples, it's another thing for me to understand what each file does. In this section I will document what each file from the tutorial does.
+
+## 
+
 
 # Resources Used
 Below are the resources used when investigating and setting up Playwright.
@@ -77,3 +130,5 @@ Below are the resources used when investigating and setting up Playwright.
 * [LambdaTest - What is Playwright?](https://www.lambdatest.com/playwright)
 * [Playwright Q&A](https://applitools.com/blog/top-playwright-questions-answered/)
 * [PlayWright Playlist](https://www.youtube.com/watch?v=UC2wj3Bg3eM&list=PLqndseDs9rmIwtzB1i08UWkQjQhpmZhtH)
+* [Testing API's with PlayWright](https://elixirautomation.medium.com/automated-api-testing-playwright-part-1-d8eea1ccf0aa)
+* [API Testing Series on Medium](https://elixirautomation.medium.com/)

@@ -1,3 +1,9 @@
 pytest-playwright
 pytest
 playwright
+pydantic
+assertpy
+Faker
+pytest-dependency
+flake8
+allure-pytest
