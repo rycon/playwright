@@ -22,4 +22,4 @@ class CreateUserEndpoint(IEndpointTemplate):
         return {'Accept': 'application/json', 'Content-Type': 'application/json'}
 
     def request_body(self) -> dict | None:
-        return create_user_request_payload().dict()
+        return create_user_request_payload().model_dump()

@@ -3,12 +3,12 @@ from typing import Generator
 from playwright.sync_api import Playwright, APIRequestContext
 
 """
-This is the orginal test file I created, you can see my TODO list of where I wanted to break the steops out into
-fictures and other utils to keep this code cleaner. The tutorial I was following takes my TODO's a step further.
+This is the original test file I created, you can see my TODO list of where I wanted to break the steps out into
+fixtures and other utils to keep this code cleaner. The tutorial I was following takes my TODO's a step further.
 """
 
 @pytest.fixture(scope="session")
-# TODO add to a utility
+# TODO add to a utility?
 def user_ids():
     ids = []
     yield ids

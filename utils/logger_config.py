@@ -4,7 +4,7 @@ import os
 
 
 cur_path = os.path.abspath(os.path.dirname(__file__))
-logger_config_file = os.path.join(cur_path, r"../../logger_config.ini")
+logger_config_file = os.path.join(cur_path, r"../logger_config.ini")
 
 
 def get_logger(module_name: str) -> logging:

@@ -1,12 +1,12 @@
-"""
-This module is used for basic CRUD operations using Playwright -> APIRequestContext
-"""
 from playwright.sync_api import APIRequestContext
 from utils.base_endpoint import IEndpointTemplate
 from constants.http_methods import HttpMethods
 
+"""
+This module is used for basic CRUD operations using Playwright -> APIRequestContext
+"""
 
-class BaseClient:
+class base_client:
 
     def __init__(self, request_context: APIRequestContext):
         self.request_context = request_context
