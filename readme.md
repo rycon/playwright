@@ -1,4 +1,7 @@
 # Playwright
+
+I created this branch to preserve the original attempt. I followed a really great, but out of date tutorial, that was more complex than what I'm used to. Main will become my second attempt to create something that works for me.
+
 The intention is to learn Playwright. To get a new project setup from scratch, to get a PoC working, and document my process to learn from. I have no prior experience with Playwright, and I have little experience writing UI Automation.
 
 All tests in this repository _should_ work from your local machine. I can't promise that breaking changes weren't made to the app or API under test.
@@ -29,6 +32,8 @@ I've included my Insomnia collection in the repo as well. I use a tool such as t
   - [TestData -\> requests .py files](#testdata---requests-py-files)
   - [TestData -\> response .py files](#testdata---response-py-files)
   - [utils -\> faker.py](#utils---fakerpy)
+  - [utils -\> user\_client.py](#utils---user_clientpy)
+  - [utils -\> base\_client.py](#utils---base_clientpy)
 - [Copilot](#copilot)
 - [Resources Used](#resources-used)
 
