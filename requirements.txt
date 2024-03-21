@@ -7,3 +7,6 @@ Faker
 pytest-dependency
 flake8
 allure-pytest
+pytest-asyncio
+jsonschema
+pyyaml

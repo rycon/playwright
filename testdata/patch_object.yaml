@@ -1,0 +1,23 @@
+- name: Create an object, the patch part of the data
+  payload: {
+    "name": "Apple MacBook Pro 16",
+    "data": {
+        "year": 2019,
+        "price": 1849.99,
+        "CPU model": "Intel Core i9",
+        "Hard disk size": "1 TB"
+    }
+  }
+  patch: {
+    "name": "My Test Object"
+    }
+  response: {
+    "id": "{place_holder_id}",
+    "name": "My Test Object",
+    "data": {
+      "year": 2019,
+      "price": 1849.99,
+      "CPU model": "Intel Core i9",
+      "Hard disk size": "1 TB"
+    }
+  }

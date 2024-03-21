@@ -1,0 +1,21 @@
+# I prefer to have my test data in yaml files, as you can comment, and use the raw json from the endpoint to use as
+- name: Create Object and use get to validate entry
+  payload: {
+    "name": "Apple MacBook Pro 16",
+    "data": {
+        "year": 2019,
+        "price": 1849.99,
+        "CPU model": "Intel Core i9",
+        "Hard disk size": "1 TB"
+    }
+  }
+  response: {
+    "id": "{place_holder_id}",
+    "name": "Apple MacBook Pro 16",
+    "data": {
+      "year": 2019,
+      "price": 1849.99,
+      "CPU model": "Intel Core i9",
+      "Hard disk size": "1 TB"
+    }
+  }

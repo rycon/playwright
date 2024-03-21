@@ -1,0 +1,29 @@
+- name: Create an object, the put to update the details
+  payload: {
+    "name": "Apple MacBook Pro 16",
+    "data": {
+        "year": 2019,
+        "price": 1849.99,
+        "CPU model": "Intel Core i9",
+        "Hard disk size": "1 TB"
+    }
+  }
+  put: {
+    "name": "Test Object - 11",
+    "data": {
+        "year": 2042,
+        "price": 9.99,
+        "CPU model": "Snapgdragon 811a",
+        "Hard disk size": "1 b"
+    }
+  }
+  response: {
+    "id": "{place_holder_id}",
+    "name": "Test Object - 11",
+    "data": {
+      "year": 2042,
+      "price": 9.99,
+      "CPU model": "Snapgdragon 811a",
+      "Hard disk size": "1 b"
+    }
+  }
