@@ -23,7 +23,9 @@ I created these tests by looking at the PlayWright Python documentation, and the
     - [GraphQL](#graphql)
     - [Testing the Endpoints](#testing-the-endpoints)
   - [Linters and Formatters](#linters-and-formatters)
+  - [Utilities](#utilities)
 - [Copilot](#copilot)
+- [Todo](#todo)
 - [Resources Used](#resources-used)
 
 # About This Repository
@@ -149,14 +151,25 @@ You can find my Insomnia export in the root of this repo. I have examples for RE
 
 ## Linters and Formatters
 
+## Utilities
+I've written several utilities to make my life easier, and to make the code (hopefully) cleaner to read. I have a yaml and config parser, and I'm trying to get a single function written to send requests. I'm new to PlayWright and its not clear to me yet how to do that without breaking the tests. 
+
 
 # Copilot
 I plan to explore copilot to see how it helps or hinders writing automation.
 
+# Todo
+* Learn more Python!
+* Add a logger to see steps, and request and response data for API test debugging
+* Add utilities and other helpers
+* Investigate Faker and use it in tests
+* Look into adding loops for API tests, to allow multiple test cases in test data, and 1 test function
+
 # Resources Used
 Below are the resources used when investigating and setting up Playwright.
-* [PlayWright Python Tutorial Series](https://testautomationu.applitools.com/pytest-tutorial/)
+* [YouTube channel with general Python tips](https://www.youtube.com/@ArjanCodes)
+* [PlayWright Python API Documentation](https://playwright.dev/python/docs/api-testing)
+* * [PlayWright Python Documentation](https://playwright.dev/python/docs/intro)
 * [LambdaTest - What is Playwright?](https://www.lambdatest.com/playwright)
 * [Playwright Q&A](https://applitools.com/blog/top-playwright-questions-answered/)
-* [PlayWright Playlist](https://www.youtube.com/watch?v=UC2wj3Bg3eM&list=PLqndseDs9rmIwtzB1i08UWkQjQhpmZhtH)
-* [PlayWright API Testing = Earthly.dev](https://earthly.dev/blog/playwright-python-api-testing/)
+* [PlayWright Playlist - UI Automation](https://www.youtube.com/watch?v=UC2wj3Bg3eM&list=PLqndseDs9rmIwtzB1i08UWkQjQhpmZhtH)
