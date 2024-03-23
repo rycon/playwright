@@ -160,6 +160,7 @@ I plan to explore copilot to see how it helps or hinders writing automation.
 
 # Todo
 * Learn more Python!
+* Look at data classes, and see if I can use that for test data.
 * Add a logger to see steps, and request and response data for API test debugging
 * Add utilities and other helpers
 * Investigate Faker and use it in tests
