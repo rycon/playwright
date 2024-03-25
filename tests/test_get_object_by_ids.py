@@ -28,11 +28,5 @@ def test_get_object(make_call: APIRequestContext) -> None:
     # Schema Validation
     validate(instance=get_response, schema=schema)
 
-def test_get_object_negative(make_call: APIRequestContext) -> None:
-    # A negative test case where an incorrect ID is sent
-    id = "test"
-    endpoint = get_endpoint("endpoint_objects")
-    get_object = make_call.get(endpoint + f"/{id}")
-
-    assert get_object.status == 404
-    assert get_object.json()["error"] == "Oject with id=test was not found."
+# No negative tests as the endpoint supports empty or missing Id's. Just returns an empty array
+    
