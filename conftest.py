@@ -8,8 +8,9 @@ from utils.config_parser import get_baseurl
 def make_call(playwright: Playwright ) -> Generator[APIRequestContext, None, None]:
 
     """
-    This is a wrapper for the PlayWright API call. It supports all REST types. 
-    You need toPass in the endpoint
+    This function makes the PlayWright API call. 
+    It supports all REST types. 
+    You need to Pass in the endpoint
     Example GET: make_call.get(f"/objects/{id}")
     Example POST: make_call.post("/objects", data=payload)
     """

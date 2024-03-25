@@ -170,7 +170,8 @@ I plan to explore copilot to see how it helps or hinders writing automation.
 Below are the resources used when investigating and setting up Playwright.
 * [YouTube channel with general Python tips](https://www.youtube.com/@ArjanCodes)
 * [PlayWright Python API Documentation](https://playwright.dev/python/docs/api-testing)
-* * [PlayWright Python Documentation](https://playwright.dev/python/docs/intro)
+* [PlayWright Python Documentation](https://playwright.dev/python/docs/intro)
 * [LambdaTest - What is Playwright?](https://www.lambdatest.com/playwright)
 * [Playwright Q&A](https://applitools.com/blog/top-playwright-questions-answered/)
 * [PlayWright Playlist - UI Automation](https://www.youtube.com/watch?v=UC2wj3Bg3eM&list=PLqndseDs9rmIwtzB1i08UWkQjQhpmZhtH)
+* [This repo helped me figure out the make_call() function](https://github.com/AutomationPanda/playwright-python-tutorial/blob/main/tests/conftest.py)
