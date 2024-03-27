@@ -127,6 +127,9 @@ A lot of the PlayWright functions have been expanded upon by these utilities, th
 [The Awesome GraphQL repo](https://github.com/chentsulin/awesome-graphql) has a lot of great resources to learn from.
 I really liked my experience writing GraphQL automation, I'll add some examples as well. I'll use this Github repo to pick a public set of endpoints
 
+I've picked the [Anilist Resolver](hhttps://anilist.co/graphiql) to write tests against.
+
+To start with, I'm going to just the resolvers like you would for REST, a test per operator
 ### Testing the Endpoints
 Prior to writing any API automation, I will first add the new endpoint to a tool such as [Insomnia](https://www.insomnia.rest). I will then do my manual API testing at this time, once I'm satisfied there are no defects, I will then write the automation scripts based on the user story acceptance criteria.
 

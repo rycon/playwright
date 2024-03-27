@@ -34,6 +34,14 @@ def get_baseurl() -> str:
     """
     return get_config("BaseConfig", "base_url")
 
+def get_graphql_url() -> str:
+    """
+    This method is used to fetch the different endpoints from config file
+    :param key: here we pass the key parameter value
+    :return: it returns the endpoint string
+    """
+    return get_config("BaseConfig", "graphql_url")
+
 def get_headers() -> str:
     """
     This method is used to fetch the different endpoints from config file

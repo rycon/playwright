@@ -10,3 +10,4 @@ allure-pytest
 pytest-asyncio
 jsonschema
 pyyaml
+raphql_query

@@ -1,0 +1,13 @@
+- name: Query Media Resolver, and return 1 Anime title
+# TODO investigate the graphql query python package
+  payload: 'query ($id: Int) {
+            Media(id: $id, type: ANIME) {
+                id
+                title {
+                    romaji
+                    english
+                }
+            }
+        }'
+  variables: {"id": 15125}
+  response: {"data":{"Media":{"id":15125,"title":{"romaji":"Teekyuu","english":"Teekyuu"}}}}
