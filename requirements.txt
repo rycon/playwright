@@ -10,4 +10,7 @@ allure-pytest
 pytest-asyncio
 jsonschema
 pyyaml
-raphql_query
+graphql_query
+colorama
+pytest-clarity
+pytest-sugar

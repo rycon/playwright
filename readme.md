@@ -22,6 +22,7 @@ I created these tests by looking at the PlayWright Python documentation, and the
   - [API Automation](#api-automation)
     - [GraphQL](#graphql)
     - [Testing the Endpoints](#testing-the-endpoints)
+  - [Debugging Failed Tests](#debugging-failed-tests)
   - [Linters and Formatters](#linters-and-formatters)
   - [Utilities](#utilities)
 - [Copilot](#copilot)
@@ -99,6 +100,7 @@ allure-pytest
 pytest-asyncio
 jsonschema
 pyyaml
+graphql_query
 ```
 
 ### VSCode Extensions
@@ -116,7 +118,11 @@ My instance of PlayWright I installed above also includes Pytest, which will mak
 It's best to keep configuration details with one file, and in this case it's the config.ini file. I've borrowed a config loader from a tutorial I found, and it works how I envisioned.
 
 ## UI Automation
-I will be using the website https://www.automationexercise.com/ for my UI Automation. I have never used this site to test before, and it looks useful at first glance.
+UI Automation is where I have the least amount of experience. I have a good understanding of the approach, and I know how to inspect a webpage to get the elements to use. I also have some experience with XPath, but from my understanding XPath should be used if no other locator type can be used.
+
+I will be using the website https://www.saucedemo.com/ for my UI Automation. I have never used this site to test before, and it looks useful at first glance.
+
+I'm use the Page Object Model (POM), where the page elements are in a separate file from the test code. This is done for the same reason as having the API automation code and test data separate. All tests reference the locators from one place, which allows updates in one place, rather than all tests.
 
 ## API Automation
 I will be using restful-api.dev for my API automation, I got the idea for my utils from a framework I've used in the past, and wrote them from memory or by googling.
@@ -129,7 +135,8 @@ I really liked my experience writing GraphQL automation, I'll add some examples 
 
 I've picked the [Anilist Resolver](hhttps://anilist.co/graphiql) to write tests against.
 
-To start with, I'm going to just the resolvers like you would for REST, a test per operator
+I've written two tests, both queries. The first only returns data from the Media resolver, and the second returns data from the Media and Characters resolvers.
+
 ### Testing the Endpoints
 Prior to writing any API automation, I will first add the new endpoint to a tool such as [Insomnia](https://www.insomnia.rest). I will then do my manual API testing at this time, once I'm satisfied there are no defects, I will then write the automation scripts based on the user story acceptance criteria.
 
@@ -151,6 +158,13 @@ While at ATB working as an API Automation QA, this would be my typical workflow:
 With the above, we needed to be certain that breaking changes to the API were handled correctly, either by creating a new version of the endpoint, or by ensuring the UI and API were released at the same time. 
 
 You can find my Insomnia export in the root of this repo. I have examples for REST and GraphQL endpoints.
+
+## Debugging Failed Tests
+In the pytest.ini file, I've set the test resulr output to report only fails, and to display them as verbose. When tests pass, the output will only state all tests have passed. When any test fails, the output will display all failures with  details about the failure. 
+
+In the case if UI tests, the expected result is displayed along with the actual. This makes it clear why the test assertion failed.
+
+A similar output is displayed for API failures, where the request, response, and expected are displayed.
 
 ## Linters and Formatters
 
@@ -178,3 +192,4 @@ Below are the resources used when investigating and setting up Playwright.
 * [Playwright Q&A](https://applitools.com/blog/top-playwright-questions-answered/)
 * [PlayWright Playlist - UI Automation](https://www.youtube.com/watch?v=UC2wj3Bg3eM&list=PLqndseDs9rmIwtzB1i08UWkQjQhpmZhtH)
 * [This repo helped me figure out the make_call() function](https://github.com/AutomationPanda/playwright-python-tutorial/blob/main/tests/conftest.py)
+* [PlayWright Python UI Automation Tutorial](https://www.browserstack.com/guide/playwright-python-tutorial)

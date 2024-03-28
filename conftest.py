@@ -1,7 +1,8 @@
+from playwright.sync_api._generated import Page
 import pytest
 from typing import Generator
 from playwright.sync_api import Playwright, APIRequestContext
-from utils.config_parser import get_baseurl, get_graphql_url
+from utils.config_parser import get_baseurl, get_graphql_url, get_webpage
 
 
 @pytest.fixture(scope='session')
@@ -46,3 +47,19 @@ def gql_query(playwright: Playwright ) -> Generator[APIRequestContext, None, Non
 
     yield request_context
     request_context.dispose()
+
+
+@pytest.fixture()
+def setup_tear_down(page: Page):
+
+    """
+    Used at the beginning of test execution. It will set some PlayWright parameters, and gets the test start page.
+    """
+
+    # browser = Playwright.chromium.launch(headless=False, slowMo=500)
+    # context = browser.new_context()
+    # page = context.new_page()
+    url = get_webpage()
+    page.set_viewport_size({"width": 1536, "height": 800})
+    page.goto(url)
+    yield page
